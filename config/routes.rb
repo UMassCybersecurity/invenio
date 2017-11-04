@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'scanner/index'
+  root 'scanner#index'
 
-  get 'scanner/report'
+  get '/report', to: 'scanner#report'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
