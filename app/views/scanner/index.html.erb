@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Enter I.P. Address:</h2>
-<%= form_tag '/report', method: :get do %>
+<%= form_tag scan_path, do %>
 <div class="row">
 	<div class='form-group col-sm-4 offset-sm-4'>
 		<%= text_field_tag :ip_address, nil,
