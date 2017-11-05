@@ -4,9 +4,9 @@
 			<meta charset="UTF-8">
         	<!-- <meta name="description" content="Invenio is a user friendly port scanner."> -->
         	<meta name="keywords" content="Invenio, port scanner, pentest">
-			
-			<title>Invenio | Home</title>
-		
+
+			<title>Invenio | Advanced Results</title>
+
 			<!--Link below for favicon-->
 			<link rel="icon" href="images/favicon.ico"/>
 
@@ -38,6 +38,21 @@
 					display: block;
 					width: 100%;
 					height: 60px;}
+				nav ul li a {
+					float: right;
+					margin: 10px 20px;}
+				nav li a:link {
+					color: #141055;
+					text-decoration: none;}
+				nav li a:visited {
+					color: #141055;
+					text-decoration: none;}
+				nav li a:hover {
+					color: #62E2E5;
+					text-decoration: none;}
+				nav li a:active {
+					color: #38E1B5;
+					text-decoration: none;}
 				main {
 					width: 100%;
 					display: block;
@@ -78,22 +93,27 @@
 				<h1>Invenio</h1>
 			</header>
 			<nav>
+				<ul>
+           	 		<li><a href="advanced.html">Advanced Results</a></li>
+           	 		<li><a href="results.html">Results</a></li>
+           	 		<li><a href="index.html">Home</a></li>
+           		</ul>
 			</nav>
 			<main>
 				<h2>Enter I.P. Address:</h2>
 				<%= form_tag "/report", method: :get do %>
-					<div class=form-group>
-						<%= text_field_tag :ip_address, nil,
-						size: 15, maxlength: 15, placeholder: 'Enter an IP Address',
-						class: 'form-control' %>
-					</div>
-					<div class=form-group>
-						<%= select_tag :scan_type, options_for_select(@options), class: 'form-control' %>
-					</div>
-					<div>
-						<%= submit_tag 'Scan', class: 'btn btn-primary' %>
-					</div>
-				<% end %>
+				<div class=form-group>
+					<%= text_field_tag :ip_address, nil,
+					size: 15, maxlength: 15, placeholder: 'Enter an IP Address',
+					class: 'form-control' %>
+				</div>
+				<div class=form-group>
+					<%= select_tag :scan_type, options_for_select(@options), class: 'form-control' %>
+				</div>
+				<div>
+					<%= submit_tag 'Scan', class: 'btn btn-primary' %>
+				</div>
+			<% end %>
 			</main>
 			<footer>
 				<p>Made during Hack UMass V November 2017</p>
