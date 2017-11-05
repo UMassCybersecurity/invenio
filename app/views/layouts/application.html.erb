@@ -7,8 +7,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <meta charset="UTF-8">
+  <!-- <meta name="description" content="Invenio is a user friendly port scanner."> -->
+  <meta name="keywords" content="Invenio, port scanner, pentest">
   <body>
-    <%= yield %>
+    <header>
+      <h1>Invenio</h1>
+    </header>
+    <nav>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>Made during Hack UMass V November 2017</p>
+    </footer>
   </body>
 </html>
